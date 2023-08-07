@@ -1,28 +1,115 @@
 * {
-    padding: 0;
-    border: 0;
-    margin: 0;
+  padding: 0;
+  border: 0;
+  margin: 0;
 }
 
+body {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
 
-div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    vertical-align: middle;
-    height: 100vh;
-    background-color: rgb(202, 202, 202);
+p {
+  padding: 20px 0 20px 0;
+}
+
+input {
+  font-family: inherit;
+  font-size: inherit;
+  width: 35px;
+  background: transparent;
+  border-bottom: 1px solid rgb(0, 0, 0);
+  transition: 0.25s ease-out;
+}
+
+input:focus {
+  outline-width: 0;
+}
+
+input:hover {
+  border-bottom: 1px solid rgb(255, 255, 255);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+button {
+  font-family: "Courier Prime";
+  font-size: 20px;
+  margin: 5px;
+  padding: 8px;
+  background: transparent;
+  transition: 0.25s;
+}
+
+button:hover {
+  box-shadow: 0 1px 0 #000000;
 }
 
 table {
-    display: flexbox;
-    width: 80vh;
-    height: 80vh;
-    border-collapse: collapse
+  border-collapse: collapse;
 }
 
 td {
-    border: 2px solid rgb(137, 137, 137);
-
+  border: 2px solid rgb(137, 137, 137);
 }
 
+#menuContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30vw;
+  background-color: rgb(193, 193, 193);
+  border-right: 2px solid rgb(2, 2, 2);
+}
+
+#title {
+  font-family: "Share Tech Mono";
+  font-size: 30px;
+  text-align: center;
+}
+
+#menu {
+  font-family: "Courier Prime";
+  font-size: 18px;
+  width: 80%;
+  display: inherit;
+  flex-direction: column;
+  text-align: center;
+}
+
+#buttonContainer {
+  display: inherit;
+  align-items: center;
+  flex-direction: column;
+}
+
+#mazeContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70vw;
+  background-color: rgb(217, 217, 217);
+}
+
+#instructionsContainer {
+  display: inherit;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#instructionsTitle {
+  font-family: "Share Tech Mono";
+}
+
+#instructions {
+  font-family: "Courier Prime";
+  font-size: 20px;
+  width: 75%;
+}

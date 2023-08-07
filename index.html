@@ -1,18 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Maze Solver</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-<div>
-<table id="maze" cellspacing="0">
-</div>
-<button id="generator" onClick="mazeGenerator()">Generate Maze</button>
-<button id="solver" onClick="timer()">Solve Maze</button>
-</table>
-<script src="script.js"></script>
-</body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Share+Tech+Mono"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Courier+Prime"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="menuContainer">
+      <section>
+        <h1 id="title">Maze Generator <br />&<br />Solver</h1>
+      </section>
+      <section id="menu">
+        <p>Rows: <input id="rows" type="number" /></p>
+        <p>Columns: <input id="columns" type="number" /></p>
+        <p id="solvedTime">Solved in:</p>
+      </section>
+      <section id="buttonContainer">
+        <button id="generateMaze" onclick="mazeGenerator()">
+          Make me a maze
+        </button>
+        <button id="solveMaze" onclick="timer()">Solve the maze</button>
+        <button id="solveSaver">Save maze</button>
+      </section>
+    </div>
+    <div id="mazeContainer">
+      <div id="instructionsContainer">
+        <h1 id="instructionsTitle">Instructions</h1>
+        <p id="instructions">
+          1. Write the desired ammount of rows and columns that you want the
+          maze to have, and then click the "Make me a maze" button to generate
+          one.
+          <br />
+          <br />
+          <br />
+          2. Then click the "Solve the maze" button to see the steps taken from
+          the green square all the way to the red one, this is the process of
+          exploration the program has achieved in order to reach its
+          destination.
+          <br />
+          <br />
+          <br />
+          3. Finally, you can save your generated maze in a database with the
+          "Save maze" button, and recall it later. You may also fetch previous
+          entries made by other users.
+          <br />
+          <br />
+          <br />
+          Every maze generated has at least one solution. The program is able to
+          "jump back" to the last known position where there is a crossroad
+          available, in case it has reached a dead-end somewhere along the way.
+        </p>
+      </div>
+      <table id="maze"></table>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>
