@@ -135,6 +135,7 @@ function mazeMaster(init) {
   }
   // Save a copy of the maze before editing it with timer().
   globalThis.mazeDB = document.getElementById("maze").innerHTML;
+  movesDB = [...new Set(movementHistory)];
 }
 
 function movementLogic(init) {
@@ -237,7 +238,7 @@ function timer() {
   } else {
     var timerInterval = 10;
   }
-  movesToColour = [...new Set(movementHistory)]; // Removes duplicates
+  movesToColour = movesDB; // Removes duplicates
 
   //This function sets the timer in which the cells explored will be highlighted
   const colourChanger = setInterval(() => {
@@ -256,7 +257,7 @@ function timer() {
 //Uploads maze and movements taken to database.
 async function saveMaze() {
   try {
-    movesDB = [...new Set(movementHistory)]; // Removes duplicate
+    // Removes duplicate
     await axios.post("/api/v1/mazes", {
       rows: totalRows,
       columns: totalColumns,
