@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maze Solver</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="menuContainer">
+      <section>
+        <h1 id="title">Maze Generator <br />&<br />Solver</h1>
+      </section>
+      <section id="buttonContainer">
+        <button id="solveMaze" onclick="timer()">Solve the maze</button>
+      </section>
+      <a href="list.html">Go back</a>
+    </div>
+    <div id="mazeContainer">
+      <table id="maze"></table>
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="singleMaze.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

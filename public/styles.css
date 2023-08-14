@@ -1,0 +1,189 @@
+/* latin-ext */
+@font-face {
+  font-family: "Castoro Titling";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/castorotitling/v3/buEupouwccj03leTfjUAhEZWlrNaaw0lSo8.woff2)
+    format("woff2");
+}
+/* latin */
+@font-face {
+  font-family: "Castoro Titling";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/castorotitling/v3/buEupouwccj03leTfjUAhEZWlrNaZQ0l.woff2)
+    format("woff2");
+}
+
+* {
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+p {
+  padding: 20px 0 20px 0;
+}
+
+input {
+  font-family: inherit;
+  font-size: inherit;
+  color: rgb(217, 217, 217);
+  width: 35px;
+  background: transparent;
+  border-bottom: 1px solid rgb(132, 132, 132);
+  transition: 0.25s ease-out;
+}
+
+input:focus {
+  outline-width: 0;
+}
+
+input:hover {
+  border-bottom: 1px solid rgb(255, 255, 255);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+button {
+  font-family: "Red Hat";
+  color: rgb(217, 217, 217);
+  font-size: 20px;
+  margin: 5px;
+  padding: 8px;
+  background: transparent;
+  transition: 0.25s;
+}
+
+button:hover {
+  box-shadow: 0 1px 0 rgb(217, 217, 217);
+}
+
+table {
+  border-collapse: collapse;
+}
+
+td {
+  border: 2px solid rgb(199, 199, 199);
+}
+
+a {
+  font-weight: 600;
+  text-decoration: none;
+}
+
+#menuContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30vw;
+  background-color: rgb(30, 30, 30);
+  border-right: 2px solid rgb(128, 128, 128);
+}
+
+#title {
+  font-family: "Castoro Titling";
+  color: rgb(217, 217, 217);
+  font-size: 30px;
+  text-align: center;
+}
+
+a,
+#menu {
+  font-family: "Red Hat";
+  color: rgb(217, 217, 217);
+  font-size: 18px;
+  width: 80%;
+  display: inherit;
+  flex-direction: column;
+  text-align: center;
+}
+
+#buttonContainer,
+#linkContainer {
+  display: inherit;
+  align-items: center;
+  flex-direction: column;
+}
+
+#mazeContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70vw;
+  overflow-y: auto;
+  background-color: rgb(60, 60, 60);
+}
+
+#instructionsContainer {
+  display: inherit;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#instructionsTitle {
+  font-family: "Castoro Titling";
+  color: rgb(217, 217, 217);
+}
+
+#instructions {
+  font-family: "Red Hat";
+  color: rgb(217, 217, 217);
+  font-size: 20px;
+  width: 75%;
+}
+
+/* For list.html */
+#list {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(60, 60, 60);
+  width: 70%;
+  overflow-y: auto;
+}
+
+#loadingText {
+  font-family: "Castoro Titling";
+  color: rgb(217, 217, 217);
+  text-align: center;
+}
+
+#listHeader {
+  display: flex;
+  flex-direction: row;
+  font-family: "Castoro Titling";
+  color: rgb(217, 217, 217);
+  text-align: center;
+  font-size: 20px;
+  justify-content: space-evenly;
+  border-bottom: 3px solid rgb(128, 128, 128);
+}
+
+#listRow {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  border-bottom: 1px solid rgb(128, 128, 128);
+  transition: 0.25s;
+}
+
+#listRow:hover {
+  background-color: rgb(40, 40, 40);
+}
+
+#listItem {
+  width: 33%;
+}
