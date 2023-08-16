@@ -238,12 +238,16 @@ function timer() {
   } else {
     var timerInterval = 10;
   }
-  movesToColour = movesDB; // Removes duplicates
+  cellsToColour = [...new Set(movementHistory)]; // Removes duplicates
 
+  const genMazeButton = document.getElementById("generateMaze");
+  genMazeButton.addEventListener("click", () => {
+    clearInterval(colourChanger);
+  });
   //This function sets the timer in which the cells explored will be highlighted
   const colourChanger = setInterval(() => {
-    if (movesToColour.length > 0) {
-      var marking = movesToColour.shift();
+    if (cellsToColour.length > 0) {
+      var marking = cellsToColour.shift();
       marking = document.getElementById(`${marking[0]},${marking[1]}`);
       marking.style["background"] = "rgba(200, 200, 200, 0.5)";
     } else {
